@@ -1,0 +1,228 @@
+---
+title: "VIVO at the Chasm"
+author: "Michael Conlon"
+date: "July 30, 2015"
+fontsize: 11pt
+csl: plos-medicine.csl
+output:
+  pdf_document:
+    fig_caption: true
+references:
+- id: chasmbook
+  title: 'Crossing the Chasm, 3rd Edition: Marketing and Selling Disruptive Products to Mainstream Customers'
+  author:
+  - family: Moore
+    given: Geoffrey
+  isbn: 978-0062292988
+  publisher: 'HarperBusiness: 3 edition (January 28, 2014)'
+- id: svt
+  title: Some VIVO Things
+  author:
+  - family: Conlon
+    given: Michael
+  URL: 'http://mconlon17.github.io/sparql/'
+- id: eichmann
+  title: CTSA Search
+  author:
+  - family: Eichmann
+    given: David
+  URL: 'http://research.icts.uiowa.edu/polyglot/statistics.jsp'
+- id: symplectic
+  title: 'Symplectic, Ltd'
+  URL: 'http://symplectic.co.uk'
+- id: ojs
+  title: Open Journal Systems
+  URL: 'https://pkp.sfu.ca/ojs/'
+- id: share
+  title: SHARE
+  URL: 'http://www.share-research.org/'
+- id: orcid
+  title: Open Researcher and Contributor ID
+  URL: 'http://orcid.org'
+- id: scielo
+  title: Scientific Electronic Library Online
+  URL: 'http://scielo.org'
+- id: sura
+  title: Southeast University Research Association
+  URL: 'http://sura.org'
+- id: ctsa
+  title: Clinical and Translational Science Award Consortium
+  URL: 'http://ctsacentral.org'
+- id: nci
+  title: 'NCI-designated Cancer Centers'
+  URL: 'http://www.cancer.gov/research/nci-role/cancer-centers'
+- id: latticegrid
+  title: 'LatticeGrid'
+  URL: 'https://github.com/NUBIC/LatticeGrid'
+- id: usda
+  title: United States Department of Agriculture
+  URL: 'http://usda.gov'
+- id: horizon2020
+  title: Horizon 2020
+  URL: 'http://ec.europa.eu/programmes/horizon2020/'
+- id: sites
+  title: Sites Implementing VIVO
+  URL: 'https://wiki.duraspace.org/display/VIVO/Sites+implementing+VIVO'
+---
+
+# The Chasm of Adoption
+
+One model of technology adoption is Geoffrey Moore's classic "Crossing the Chasm"[see @chasmbook].  Moore coined the terms "innovator," "early adopter," "early middle," "late middle," and "laggard" to describe five customer approaches to technology adoption and disruptive technology adoption, in particular. Between the early adopter and the early middle is the "chasm" (see Figure 1).  Technologies adopted by innovators and early adopters may never cross the chasm to adoption by early middle and other customers.
+
+```{r, echo=FALSE, fig.height=3.5, fig.width=6.5, fig.cap="The chasm in technology adoption"}
+x <- seq(-3, 3, length=1000)
+hx <- dnorm(x)
+plot(x, hx, type="n", xlab="", ylab="", axes=FALSE)
+abline(h=0)
+lb <- -3; ub <- -2; i <- x >= lb & x <= ub
+polygon(c(lb,x[i],ub), c(0,hx[i],0), col="red")
+lb <- -2; ub <- -1.5; i <- x >= lb & x <= ub
+polygon(c(lb,x[i],ub), c(0,hx[i],0), col="pink")
+#lb <- -1.5; ub <- -1; i <- x >= lb & x <= ub
+#polygon(c(lb,x[i],ub), c(0,hx[i],0), col="white")
+lb <- -1; ub <- 0.5; i <- x >= lb & x <= ub
+polygon(c(lb,x[i],ub), c(0,hx[i],0), col="lightblue")
+lb <- 0.5; ub <- 2; i <- x >= lb & x <= ub
+polygon(c(lb,x[i],ub), c(0,hx[i],0), col="blue")
+lb <- 2; ub <- 3; i <- x >= lb & x <= ub
+polygon(c(lb,x[i],ub), c(0,hx[i],0), col="darkblue")
+text(-.2,.15,"Early\nmiddle\nadopters")
+text(-1.26,.28,"The\nChasm\n")
+segments(-1.26, .23, -1.26, .10)
+```
+
+The customer approaches to new technology are readily characterized:
+
+* Innovators are interested in creating, or helping to create, new technologies.
+* Early adopters are interested in being the first to have a working version of the technology.  They rush in to adopt new things, are comfortable with change, help promote new technologies, and accept the bumps in the road that may occur.  They want to be recognized as leaders and pioneers.
+
+These two groups are to the left of the chasm.  Technical approaches, and appeal to innovation will suffice to market to these groups.  These two groups represent a small minority of the potential adopters of a new technology.
+
+Then comes the chasm.  Across the chasm are customers who are not concerned with technology or innovation.  For these customers, the product must create tangible value for them in their everyday work.
+
+* The early middle is primarily focused on benefit.  They want a clear answer to the question "what do I get?" and they want the answer to be relevant to their everyday work.  They are practical and looking for opportunities to do better work.
+* The late middle is primarly focused on cost.  They may see benefitss, but they also see costs. They want return on investment that they can clearly measure.
+* The laggards consider most technology to be a burden, and rarely, and slowly, adopt technology.  They typically adopt only after most others have adopted.
+
+# VIVO At the Chasm
+
+Enthusiasm without adoption is the hallmark of being at the chasm.  VIVO has many true believers, but little growth.  VIVO has been stuck on 21 members, 25 production sites[@sites], and 80 sites in development for more than three years. Despite a recent uptake in enthusiasm, we have not seen an uptake in adoption.  New early adopter sites start, but an equal number of sites fail to complete their implementations leaving the number of VIVO sites approximately stable from year to year.
+
+On one side of the chasm are the innovators and the early adopters -- sites that chose VIVO because they invented it, participated in the NIH grant, or display classic innovator/early adopter behavior (extensive development effort to support their local implementations).  VIVO can continue to pursue innovators and early adopters, but the lack of growth in adoption indicates that VIVO may have exhausted the market for such customers in the US.  THere are indications of additional early adopter sites elsewhere in the world.  But early adopter sites are at the chasm, not across it.
+
+On the other side of the chasm is the early middle -- sites that will adopt VIVO if they see what they are going to get.  These sites focus on benefit.  The benefit they seek is benefit for their operations -- research, teaching, and engagement, that is, benefit in the every day work of scholarly organizations.  They are not particularly altruistic, nor are they interested in promotional benefits.  The message to early middle adopters should be "VIVO will help you succeed."  Clear benefits such as increase in research funding, lower compliance risk, competitive advantage, improved ability to assess research impact, meet regulatory requirements, and ability to create new collaborations, may appeal to early middle adopters.  To get across the chasm, and see real and permanent growth in the number of adopting sites, VIVO must appeal to the early middle.
+
+Further across the chasm are the late majority.  These sites will adopt VIVO only when many others have, and only after extensive cost/benefit analysis.  These sites should not be pursued at this time.
+
+And of course, still further from the chasm are the laggards. Laggards should never be pursued.  Sites that are slow to adopt any technology will be very slow to adopt VIVO, if ever.
+
+# Crossing the Chasm -- Recommended Actions
+
+To cross the chasm and achieve large scale adoption by early middle adopters, VIVO should pursue particular approaches in product strategy, community strategy and partner strategy.  Each approach is focused on appeal to the early middle adopter.  Once sufficient momentum with the early middle is established, subsequent strategies can be used to appeal to late middle adopters.
+
+## Product Strategy -- More Output
+
+Early middle adopters want results.  This means output.  We know it is difficult to get data in to VIVO, but early middle adopters are focused on benefit.  They will pay the price in time and effort to get data in if they see value generated from getting the data out.  VIVO must provide simple, compelling displays, reports and datasets that can be used by early middle adopters to improve research, teaching and engagement at early middle adopter institutions.  Several types of output have been requested by community members for years.  These outputs need to be provided.
+
+### CV, Resume, Biosketch, Portfolio
+
+One clear benefit for early middle adopters is the production of faculty CV, resume, biosketch and portfolio from VIVO.  This straightforward output will create interest in adoption from faculty who find production of these documents to be burdensome, from institutions who want to positively impact faculty experience, and from reserch organizations who must routinely produce these documents with attention to funde requirements, for grant applications.  Using a template approach and with minor ontology extensions, VIVO should be readily capable of producing a variety of such documents.  Using caching approaches, VIVO should be able to produce these documents "ahead of time" resulting in a positive user experience when requested.
+
+### Visualizations
+
+Visualizations in VIVO are currently broken.  This is unacceptable to most users, but particularly to early middle adopters who are looking for benefit.  When potential benefit is unusable, these users will look elsewhere.  Visualizations in VIVO should be both traditional -- meeting needs of administrators, and non-traditional, meeting the needs of researchers, grant applicants and students.  There is great interest and need for systems that can represent information on maps.  Together, use of the wgs84 ontology for representing lat and long, with supplied lat and long for the geographic entities included with VIVO, and map visualizations create an opportunity to reintroduce VIVO to many early middle institutions.  Time-based charts, quantities and network type charts are natural outputs for VIVO.  Visualizations are critical for early middle adoption.
+
+### Reports and data for existing reporting infrastructures
+
+With all the data in VIVO, institutions should find it trivial to get it out.  SPARQL should be reserved for custom queries or queries involving local ontology extensions.  Standard queries should be able to produce tabular data regarding faculty at the department, college and university level, tabulating grants, publications and courses.  See [@svt] for a collection of queries that have been useful at Florida for tabulating data from VIVO.  Similar queries can be constructed without resort to ontology extensions that produce information that can be represented in rows and columns.  Simple transformation of the SPARQL output into attractive tables is feasible.  Additional output formats such as CSV, and outputs ready for reporting and analysis systems are highly desirable.
+
+## Community Strategy -- Consortia
+
+VIVO is well positioned in several large-scale consortia to generate benefits for consortia members and for the consortia as a whole.  Working with consortia leadership, VIVO should be able to obtain funding to assist with consortia support, as well as produce features that benefit consortia business processes.
+
+### Southeastern University Research Association (SURA)
+
+We must know what SURA [see @sura] wants and we must work with them closely to help them achieve their goals.  SURA has had a successful pilot of VIVO at five schools -- Old Dominion, Oklahoma, George Washington University, Virginia Tech, and the University of Maryland Baltimore County.  Several additional SURA schools were already VIVO adopters -- Florida, Duke, and Texas A&M. Togther this is eight VIVO adoptions in SURA.  SURA has 62 members.  Working directly with SURA leadership, we can encourgae VIVO adoption at the remaining 54 SURA schools and, with their support, develop solutions to benefit SURA members.
+
+### Clinical and Translational Science Award (CTSA) Consortium
+
+The CTSA consortium [see @ctsa] is a collection of 62 of the premier biomedical research instititions in the United States.  Each has recevied a Clinical and Translational Science Award grant from the National Institutes of Health National Center for the Advancement of Trasnslational Science.  27 CTSA institutions are currently producing VIVO data using a variety of systems. See [@eichmann].  Working with the consortium leadership, the CTSA Consortium Steering Committee, we should explore the needs of the consortium and how benefits for the consortium can be constructed.  Northwestern, Florida, Duke, Weill Cornell, Dartmouth, New Mexico and others are already VIVO sites at CTSA Consortium schools.  All CTSAs are capable of producing VIVO data.
+
+### National Cancer Institute Desginated Cancer Centers
+
+69 research organizations in the United States are designated National Cancer Institute cancer centers [see @nci].  These organizations have specific needs to collect and report scholarship data.  VIVO provides many additional benefits.  With literature indexed by PubMed, cancer centers have a reduced cost to implement VIVO -- outstanding PubMed ingest tools already exist and are in common use at multiple VIVO institutions.  VIVO should deliver these tools as part of the standard installation.  Thirteen cancer centers will adopt VIVO as an effort to replace a retired piece of software from Northwestern, LatticeGrid [see @latticegrid].  Northwestern has developed NCI reporting plug-ins for VIVO to generate tremendous benefit for NCI adopters of VIVO.  Working with the designated cancer centers, we should be able to increase adoption.
+
+### United States Department of Agriculture (USDA)
+
+When the USDA [see @usda] began its effort to implement VIVO for its employee researchers, their strategic direction was to eventually have VIVO data for all agricultural research in the United States.  This research is primarily conducted by the 76 land grant universities of the United States.  The land grant universities and the USDA work in close cooperation to advance agricultural research.  Several land grant universities are already VIVO sites, including Cornell and Florida.  Working with the USDA and the land grant universities, effort to improve the suitability of VIVO for the work of agricultural research should generate additional adoption.
+
+### Europe
+
+In Europe, VIVO has position with Horizon2020 [see @horizon2020], the large scale EU framework program for research and innovation.  Working with Horizon2020, VIVO can become the *defacto* standard for representing scholarship in Europe.  Pilot funding is available to assist VIVO in improving its ability to meet the needs of the European community.
+
+European adoption of VIVO is on the rise with three sites in Spain, sites in the Netherlands, Germany, and the UK.  Sites in Italy, Poland, and elsewhere are evaluating VIVO currently.  Promotional events in Europe, such as the event in Hanover in September and the planned Duraspace event in the spring will further adoption, as will attention to product features described previously.  These adopters are innovators and early adopters.  Additional work will be needed to cross the chasm in Eurpoe.
+
+## Partner Strategy -- VIVO in the Ecosystem
+
+To create value for early middle aopters, VIVO should continue to be active in the development of the emerging ecosystem for scholarship.  Technology is advancing rapidly.  Publication models are changing.  The role of local repositories is strengthening.  This disruptive change is concerning to early middle adopters, who just want to get work done.  VIVO must be a trusted partner in the changes and become the "obvious choice" for early middle adopters looking to benefit from the changes.  As trusted partner, VIVO is able to represent early middle adopters in the world efforts to improve the scholarly ecosystem.
+
+### Symplectic
+
+Symplectic [see @symplectic], with its Elements product, is a key enabler of VIVO.  Symplectic Elements appeals to the early middle customer.  It provides solid working solutions to problems these adopters face every day.  Symplectic solves problems with content acquisition, data management, security, open source viability, and technology risk.  VIVO provides data sharing and open information representation and should provide additional outputs useful to early middle adopters.
+
+It is yet to be seen if other vendors will be able to provide similar value to the early middle adopters of VIVO.
+
+### Open Journal System
+
+The Open Journal System [see @ojs] is in use by more than 10,000 journals around the world.  Working with OJS, VIVO has an opportunity to provide VIVO data for the contents of these journals.  This creates tremendous value for early middle adopters outside the United States, where OJS is strongest.  The OJS/VIVO effort complements efforts to ingest data from PubMed and CrossRef, providing broad coverage for publications across the world.
+
+### SHARE
+
+SHARE [see @share] is "a higher education initiative whose mission is to maximize research impact by making a comprehensive inventory of research widely discoverable, accessible, and reusable."  Led by the Association of Research Libraries with the support of the AAU and the APLGU, SHARE is developing a notification system for research outputs including outputs from institutional repositiories, that provides high value for VIVO and VIVO early middle adopters in the US.
+
+### OCRID
+
+ORCID [see @orcid] is a key to VIVO's success.  Thought leaders in the community know that VIVO will fail if each site must disambiguate its authors from external resources such as PubMed, CrossRef and others.  As ORCID progresses, disambigation is reduced and VIVO sites benefit.  VIVO must support ORCID adoption by scholars world-wide every chance it gets.
+
+### Scientific Electronic Library Online (SciElo)
+
+SciElo [see @scielo] provides open access publishing for 1,270 journals in South and Central America. In a manner similar to OJS, VIVO is in a position to partner with SciElo and create VIVO data for the majority of academic literature in this part of the world, creating extraordinary value for adopters there.
+
+# Themes to Avoid
+
+Some VIVO themes are not appealing to early middle adopters and should not be used as reasons for adopting VIVO.
+
+1.  Ontology.  Unless you are talking to an innovator, ontology will sound complex and oppositional to the goals of an institution.
+1.  RDF, SPARQL, Triple Stores or any other technical topic.  Same as above.  The early middle has little interest in committing to new technologies.  They see VIVO as part of the institutional infrastructure.  As such, it must be solid, non-controversial, and create benefits to the institution and its members.
+1.  Future ecosystems.  While VIVO can and should help develop the research ecosystems of the future, early middle adopters are interested in what works *now* -- the benefits that will accrue to their insitutions and their institutions members for adopting VIVO *now*.  While they may enjoy seeing VIVO participate and lead efforts to create the research ecosystem of the future, this is secondary to their interest in creating benefits *now*.
+1. Open source, open access, open science.  While innovators and evangelists may favor open source, open access and open science, many early middle customers may see these initiatives as evangelizing and not relevant to creating value at their institutions *now*.  In open source, there is no corporate entity to do business with and no corporate entity to hold accountable when things do not go as expected.  Open source appeals to innovators and early adopters, not to early middle adopters.  Similarly, open access and open science are global efforts that should move at their own pace and not interfere with implementing VIVO.
+
+# Themes to emphasize
+
+1. Benefits.  Early middle adopters want to understand "what do I get?".  They understand there will be considerable effort to create VIVO data at their institutions.  They understand there will be considerable technological risk involved with triple stores, SPARQL and ontologies.  New capabilities relevant to their business must be emphaiszed.  These benefits include ability to assess program impact, research impact, and to use these assessments to improve their institutions.
+1. Adoption by others.  This mitigates technology risk as well as the risk that VIVO will pass away.  More adopters, more members, and more activity, each lower the risk of adoption.  "No one every got fired for buying IBM" -- but plenty of people get burned for adopting smaller technologies.  Adoption leads to more adoption.  Telling VIVO Stories is a powerful tool for demonstrating adoption, leading to more adoption.
+1. Service providers.  The presence of service providers mitigates technology risk and provides assurances that the implementation can be completed and maintained.
+1. The library.  The library is a powerful stabilizing influence for early middle adopters.  While early middle adopters may be put off by the technologies involved with VIVO, they will respond positively to the involvement of libraries which are naturally conservative.  When libraries are involved with VIVO, it sends a signal to the rest of the institution that technology risk has been mitigated.
+
+# Next Steps
+
+##Product strategy -- Focus on Output
+
+The roadmap should place heavy emphasis on output appealing to early middle adopters.  Create benefits for the early middle adopters.  Visualizations, reports, data output and other opportunities to present, analysze and reuse VIVO data are key.
+
+The roadmap is currently under development.
+
+##Community strategy -- Focus on Consortia
+
+Community strategy should focus on groups that can help VIVO drive adoption to early middle adopters.  SURA, the CTSA Consortia, USDA, the NIH NCI Cancer Centers and initiatives in Europe are key.  Each should be worked by the project director, Duraspace, Steering, Leadership and VIVO community to insure increased adoption through these consortia, and participation by consortia leadership in the adoption of VIVO, and recognition and development of software beenfitting the consortial members.
+
+##Partner strategy -- Focus on the Ecosystem
+
+Partner strategy should docus on groups that can help VIVO become the trusted partner and obvious choice in the emerging research ecosystem.
+
+#Summary
+
+For VIVO to get from 25 adoptions to 50 to 100, 200, 400 and 800, VIVO must appeal to the early middle adopters -- those decision makers who are looking to create benefit for their institutions.  VIVO must clarify its benefit to scholarly organizations through product improvement focused on output, community strategy focused on consortial adoption, and partner strategy focused on the next generation research ecosystem. 
+
+# References
+
