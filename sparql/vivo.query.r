@@ -15,5 +15,7 @@ vivo.query <- function(query, endpoint= 'http://localhost:8080/vivo/api/sparqlQu
     "vitrop","http://vitro.mannlib.cornell.edu/ns/vitro/public#",
     "vivo","http://vivoweb.org/ontology/core")
     ){
+  # Given an endpoint url, a query, and username and password, call
+  # A VIVO SPARQL API and return the requested triples
   SPARQL::SPARQL(endpoint,q,prefix,curl_args=list(username=username,password=password))
 }
