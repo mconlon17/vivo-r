@@ -1,3 +1,6 @@
+# Copyright (c) 2015 Mike Conlon
+# See LICENSE file for terms of use
+
 Sys.time()
 #  Generate Organizational structure for the University of Florida
 #  Color nodes by an attribute of the organization

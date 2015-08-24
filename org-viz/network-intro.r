@@ -1,7 +1,8 @@
 #
 # Learning to use network and network plotting functions for VIVO data
 #
-# M. Conlon April 11, 2011
+# Copyright (c) 2015 Mike Conlon
+# See LICENSE file for terms of use
 #
 #  To Do
 #  Add grant dollars as an attribute.  Derive attribute for People, Department, College
