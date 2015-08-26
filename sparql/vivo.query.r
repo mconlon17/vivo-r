@@ -1,5 +1,5 @@
 vivo.query <- function(query, endpoint= 'http://localhost:8080/vivo/api/sparqlQuery',
-  email= 'vivo_root@school.edu', password= 'v;bisons', 
+  email= 'vivo_root@school.edu', password= 'v;bisons', format="tsv",
   ns = c(
     "rdf","<http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
     "rdfs","<http://www.w3.org/2000/01/rdf-schema#>",
@@ -17,5 +17,5 @@ vivo.query <- function(query, endpoint= 'http://localhost:8080/vivo/api/sparqlQu
     ){
   # Given an endpoint url, a query, and username and password, call
   # A VIVO SPARQL API and return the requested triples
-  SPARQL(endpoint,q,ns=ns,extra=list(email=email,password=password))
+  SPARQL(endpoint,q,ns=ns,extra=list(email=email,password=password),format=format)
 }
