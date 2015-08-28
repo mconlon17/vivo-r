@@ -116,7 +116,9 @@ for (i in seq(1,length(levels(nodes)))){
 set.vertex.attribute(net,"vertex.names",node.names)
 
 # ------------------------------------------------------------------
-# for each node, add type
+# for each node, add type (or any other single valued attribuyte that will form the 
+# basis for coloring the nodes (org) in the network.  Could be number of faculty, number of
+# of papers published, or any other organization attribute.)
 
 query <- "SELECT ?x $type
 WHERE {
@@ -166,6 +168,3 @@ write.csv(report,file="org-query.csv")
 
 Sys.time()
 # Done
-
-
-
