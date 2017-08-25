@@ -1,5 +1,5 @@
 vivo.query <- function(query, endpoint= 'http://localhost:8080/vivo/api/sparqlQuery',
-  email= 'vivo_root@school.edu', password= 'v;bisons', format="tsv",
+  email= 'vivo_root@school.edu', password= '*******', format="tsv",
   ns = c(
     "rdf","<http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
     "rdfs","<http://www.w3.org/2000/01/rdf-schema#>",
