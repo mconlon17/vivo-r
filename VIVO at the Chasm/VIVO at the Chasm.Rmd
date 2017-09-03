@@ -1,13 +1,17 @@
 ---
 title: "VIVO at the Chasm"
 author: "Michael Conlon"
-date: "July 30, 2015"
+date: "September 3, 2017"
 fontsize: 11pt
 csl: plos-medicine.csl
 output:
   pdf_document:
     fig_caption: true
 references:
+- id: grid
+  title: 'GRID: Global Research Identifier Database'
+  publisher: 'Digital Science and Research Solutions, Ltd'
+  URL: 'http://grid.ac'
 - id: chasmbook
   title: 'Crossing the Chasm, 3rd Edition: Marketing and Selling Disruptive Products to Mainstream Customers'
   author:
@@ -62,7 +66,7 @@ references:
   URL: 'http://ec.europa.eu/programmes/horizon2020/'
 - id: sites
   title: Sites Implementing VIVO
-  URL: 'https://wiki.duraspace.org/display/VIVO/Sites+implementing+VIVO'
+  URL: 'http://duraspace.org/registry/vivo'
 ---
 
 # The Chasm of Adoption
@@ -106,13 +110,13 @@ Then comes the chasm.  Across the chasm are customers who are not concerned with
 
 # VIVO At the Chasm
 
-Enthusiasm without adoption is the hallmark of being at the chasm.  VIVO has many true believers, but little growth.  VIVO has been stuck on 21 members, 25 production sites[@sites], and 80 sites in development for more than three years. Despite a recent uptake in enthusiasm, we have not seen an uptake in adoption.  New early adopter sites start, but an equal number of sites fail to complete their implementations leaving the number of VIVO sites approximately stable from year to year.
+Enthusiasm without adoption is the hallmark of being at the chasm.  VIVO has many true believers, but little growth.  VIVO has been stuck on 25 members, 70 production sites[@sites], and 80 sites in development for more than five years. Despite a recent uptake in enthusiasm, we have not seen an uptake in adoption.  New early adopter sites start, but a similar number of sites fail to complete their implementations leaving the number of VIVO sites approximately stable from year to year.
 
-On one side of the chasm are the innovators and the early adopters -- sites that chose VIVO because they invented it, participated in the NIH grant, or display classic innovator/early adopter behavior (extensive development effort to support their local implementations).  VIVO can continue to pursue innovators and early adopters, but the lack of growth in adoption indicates that VIVO may have exhausted the market for such customers in the US.  THere are indications of additional early adopter sites elsewhere in the world.  But early adopter sites are at the chasm, not across it.
+On one side of the chasm are the innovators and the early adopters -- sites that chose VIVO because they invented it, participated in the NIH grant, or display classic innovator/early adopter behavior (extensive development effort to support their local implementations).  VIVO can continue to pursue innovators and early adopters, but the lack of growth in adoption indicates that VIVO may have exhausted the market for such customers in the US.  There are indications of additional early adopter sites elsewhere in the world.  But early adopter sites are at the chasm, not across it.
 
-On the other side of the chasm is the early middle -- sites that will adopt VIVO if they see what they are going to get.  These sites focus on benefit.  The benefit they seek is benefit for their operations -- research, teaching, and engagement, that is, benefit in the every day work of scholarly organizations.  They are not particularly altruistic, nor are they interested in promotional benefits.  The message to early middle adopters should be "VIVO will help you succeed."  Clear benefits such as increase in research funding, lower compliance risk, competitive advantage, improved ability to assess research impact, meet regulatory requirements, and ability to create new collaborations, may appeal to early middle adopters.  To get across the chasm, and see real and permanent growth in the number of adopting sites, VIVO must appeal to the early middle.
+On the other side of the chasm is the early middle -- sites that will adopt VIVO if they see what they are going to get.  These sites focus on benefit.  The benefit they seek is benefit for their operations -- research, teaching, and engagement, that is, benefit in the every day work of scholarly organizations.  They are not particularly altruistic, nor are they interested in promotional benefits.  The message to early middle adopters should be "VIVO will help you succeed."  Clear benefits such as increase in research funding, lower compliance risk, competitive advantage, improved ability to assess research impact, meet regulatory requirements, and ability to create new collaborations, may appeal to early middle adopters.  To get across the chasm, and to see real and permanent growth in the number of adopting sites, VIVO must appeal to the early middle.
 
-Further across the chasm are the late majority.  These sites will adopt VIVO only when many others have, and only after extensive cost/benefit analysis.  These sites should not be pursued at this time.
+Further across the chasm are the late middle.  These sites will adopt VIVO only when many others have, and only after extensive cost/benefit analysis.  These sites should not be pursued at this time.
 
 And of course, still further from the chasm are the laggards. Laggards should never be pursued.  Sites that are slow to adopt any technology will be very slow to adopt VIVO, if ever.
 
@@ -126,15 +130,15 @@ Early middle adopters want results.  This means output.  We know it is difficult
 
 ### CV, Resume, Biosketch, Portfolio
 
-One clear benefit for early middle adopters is the production of faculty CV, resume, biosketch and portfolio from VIVO.  This straightforward output will create interest in adoption from faculty who find production of these documents to be burdensome, from institutions who want to positively impact faculty experience, and from reserch organizations who must routinely produce these documents with attention to funde requirements, for grant applications.  Using a template approach and with minor ontology extensions, VIVO should be readily capable of producing a variety of such documents.  Using caching approaches, VIVO should be able to produce these documents "ahead of time" resulting in a positive user experience when requested.
+One clear benefit for early middle adopters is the production of faculty CV, resume, biosketch and portfolio from VIVO.  This straightforward output will create interest in adoption from faculty who find production of these documents to be burdensome, from institutions who want to positively impact faculty experience, and from research organizations who must routinely produce these documents with attention for grant applications.  Using a template approach and with minor ontology extensions, VIVO should be readily capable of producing a variety of such documents.  Using caching approaches, VIVO should be able to produce these documents "ahead of time" resulting in a positive user experience when requested.
 
 ### Visualizations
 
-Visualizations in VIVO are currently broken.  This is unacceptable to most users, but particularly to early middle adopters who are looking for benefit.  When potential benefit is unusable, these users will look elsewhere.  Visualizations in VIVO should be both traditional -- meeting needs of administrators, and non-traditional, meeting the needs of researchers, grant applicants and students.  There is great interest and need for systems that can represent information on maps.  Together, use of the wgs84 ontology for representing lat and long, with supplied lat and long for the geographic entities included with VIVO, and map visualizations create an opportunity to reintroduce VIVO to many early middle institutions.  Time-based charts, quantities and network type charts are natural outputs for VIVO.  Visualizations are critical for early middle adoption.
+Visualizations in VIVO should be both traditional -- meeting needs of administrators, and non-traditional, meeting the needs of researchers, grant applicants and students.  There is great interest and need for systems that can represent information on maps.  VIVO supports recording of location information, and the GRID data [@grid] which can be loaded into VIVO provides geographic locations for the research organizations of the world.  New location-based visualizations create an opportunity to reintroduce VIVO to many early middle institutions.  Time-based charts, quantities and network type charts are natural outputs for VIVO.  Visualizations are critical for early middle adoption.
 
 ### Reports and data for existing reporting infrastructures
 
-With all the data in VIVO, institutions should find it trivial to get it out.  SPARQL should be reserved for custom queries or queries involving local ontology extensions.  Standard queries should be able to produce tabular data regarding faculty at the department, college and university level, tabulating grants, publications and courses.  See [@svt] for a collection of queries that have been useful at Florida for tabulating data from VIVO.  Similar queries can be constructed without resort to ontology extensions that produce information that can be represented in rows and columns.  Simple transformation of the SPARQL output into attractive tables is feasible.  Additional output formats such as CSV, and outputs ready for reporting and analysis systems are highly desirable.
+With all the data in a VIVO, institutions should find it trivial to get it out.  SPARQL should be reserved for custom queries or queries involving local ontology extensions.  Standard queries should be able to produce tabular data regarding faculty at the department, college and university level, tabulating grants, publications and courses.  See [@svt] for a collection of queries that have been useful at Florida for tabulating data from VIVO.  Similar queries can be constructed without resort to ontology extensions that produce information that can be represented in rows and columns.  Simple transformation of the SPARQL output into attractive tables is feasible.  Additional output formats such as CSV, and outputs ready for reporting and analysis systems are highly desirable.
 
 ## Community Strategy -- Consortia
 
@@ -142,25 +146,25 @@ VIVO is well positioned in several large-scale consortia to generate benefits fo
 
 ### Southeastern University Research Association (SURA)
 
-We must know what SURA [see @sura] wants and we must work with them closely to help them achieve their goals.  SURA has had a successful pilot of VIVO at five schools -- Old Dominion, Oklahoma, George Washington University, Virginia Tech, and the University of Maryland Baltimore County.  Several additional SURA schools were already VIVO adopters -- Florida, Duke, and Texas A&M. Togther this is eight VIVO adoptions in SURA.  SURA has 62 members.  Working directly with SURA leadership, we can encourgae VIVO adoption at the remaining 54 SURA schools and, with their support, develop solutions to benefit SURA members.
+We must know what SURA [see @sura] wants and we must work with them closely to help them achieve their goals.  SURA has had a successful pilot of VIVO at five schools -- Old Dominion, Oklahoma, George Washington University, Virginia Tech, and the University of Maryland Baltimore County.  Several additional SURA schools were already VIVO adopters -- Florida, Duke, and Texas A&M. Togther, this is eight VIVO adoptions in SURA.  SURA has 62 members.  Working directly with SURA leadership, we can encourage VIVO adoption at the remaining 54 SURA schools and, with their support, develop solutions to benefit SURA members.
 
 ### Clinical and Translational Science Award (CTSA) Consortium
 
-The CTSA consortium [see @ctsa] is a collection of 62 of the premier biomedical research instititions in the United States.  Each has recevied a Clinical and Translational Science Award grant from the National Institutes of Health National Center for the Advancement of Trasnslational Science.  27 CTSA institutions are currently producing VIVO data using a variety of systems. See [@eichmann].  Working with the consortium leadership, the CTSA Consortium Steering Committee, we should explore the needs of the consortium and how benefits for the consortium can be constructed.  Northwestern, Florida, Duke, Weill Cornell, Dartmouth, New Mexico and others are already VIVO sites at CTSA Consortium schools.  All CTSAs are capable of producing VIVO data.
+The CTSA consortium [see @ctsa] is a collection of 62 of the premier biomedical research instititions in the United States.  Each has recevied a Clinical and Translational Science Award grant from the National Institutes of Health National Center for the Advancement of Trasnslational Science.  32 CTSA institutions are currently producing VIVO data using a variety of systems. See [@eichmann].  Working with the consortium leadership, the CTSA Consortium Steering Committee, we should explore the needs of the consortium and how benefits for the consortium can be constructed.  Northwestern, Florida, Duke, Weill Cornell, Dartmouth, New Mexico and others are already VIVO sites at CTSA Consortium schools.  All CTSAs are capable of producing VIVO data.
 
 ### National Cancer Institute Desginated Cancer Centers
 
-69 research organizations in the United States are designated National Cancer Institute cancer centers [see @nci].  These organizations have specific needs to collect and report scholarship data.  VIVO provides many additional benefits.  With literature indexed by PubMed, cancer centers have a reduced cost to implement VIVO -- outstanding PubMed ingest tools already exist and are in common use at multiple VIVO institutions.  VIVO should deliver these tools as part of the standard installation.  Thirteen cancer centers will adopt VIVO as an effort to replace a retired piece of software from Northwestern, LatticeGrid [see @latticegrid].  Northwestern has developed NCI reporting plug-ins for VIVO to generate tremendous benefit for NCI adopters of VIVO.  Working with the designated cancer centers, we should be able to increase adoption.
+69 research organizations in the United States are designated National Cancer Institute cancer centers [see @nci].  These organizations have specific needs to collect and report scholarship data.  VIVO provides many additional benefits.  With literature indexed by PubMed, cancer centers have a reduced cost to implement VIVO -- outstanding PubMed ingest tools already exist and are in common use at multiple VIVO institutions.  VIVO should deliver these tools as part of the standard installation.  Thirteen cancer centers will adopt VIVO as an effort to replace a retired piece of software from Northwestern, LatticeGrid [see @latticegrid].  Northwestern has developed NCI reporting plug-ins for VIVO to generate tremendous benefit for NCI adopters of VIVO.  The Fred Hutchinson Cancer Center is working with Clarivate Analytics on a VIVO implementation.  Working with the designated cancer centers, we should be able to increase adoption.
 
 ### United States Department of Agriculture (USDA)
 
-When the USDA [see @usda] began its effort to implement VIVO for its employee researchers, their strategic direction was to eventually have VIVO data for all agricultural research in the United States.  This research is primarily conducted by the 76 land grant universities of the United States.  The land grant universities and the USDA work in close cooperation to advance agricultural research.  Several land grant universities are already VIVO sites, including Cornell and Florida.  Working with the USDA and the land grant universities, effort to improve the suitability of VIVO for the work of agricultural research should generate additional adoption.
+When the USDA [see @usda] began its effort to implement VIVO for its employee researchers, their strategic direction was to eventually have VIVO data for all agricultural research in the United States.  This research is primarily conducted by the 76 land grant universities of the United States.  The land grant universities and the USDA work in close cooperation to advance agricultural research.  Several land grant universities are already VIVO sites, including Cornell, Texs A&M, and Florida.  Working with the USDA and the land grant universities, efforts to improve the suitability of VIVO for the work of agricultural research should generate additional adoption.
 
 ### Europe
 
-In Europe, VIVO has position with Horizon2020 [see @horizon2020], the large scale EU framework program for research and innovation.  Working with Horizon2020, VIVO can become the *defacto* standard for representing scholarship in Europe.  Pilot funding is available to assist VIVO in improving its ability to meet the needs of the European community.
+In Europe, VIVO has position with Horizon2020 [see @horizon2020], the large scale EU framework program for research and innovation.  Working with Horizon2020, VIVO can become the *defacto* standard for representing scholarship in Europe.  Pilot funding is available to assist VIVO with improving its ability to meet the needs of the European community.
 
-European adoption of VIVO is on the rise with three sites in Spain, sites in the Netherlands, Germany, and the UK.  Sites in Italy, Poland, and elsewhere are evaluating VIVO currently.  Promotional events in Europe, such as the event in Hanover in September and the planned Duraspace event in the spring will further adoption, as will attention to product features described previously.  These adopters are innovators and early adopters.  Additional work will be needed to cross the chasm in Eurpoe.
+European adoption of VIVO is on the rise with three sites in Spain, sites in the Netherlands, Denmark, Germany, and the UK.  Sites in Italy, Poland, and elsewhere are evaluating VIVO currently.  TIB Hannover is actively promoting VIVO across Germany.  Promotional events in Europe  will attention to product features described previously.  These adopters are innovators and early adopters.  Additional work will be needed to cross the chasm in Eurpoe.
 
 ## Partner Strategy -- VIVO in the Ecosystem
 
@@ -180,9 +184,9 @@ The Open Journal System [see @ojs] is in use by more than 10,000 journals around
 
 SHARE [see @share] is "a higher education initiative whose mission is to maximize research impact by making a comprehensive inventory of research widely discoverable, accessible, and reusable."  Led by the Association of Research Libraries with the support of the AAU and the APLGU, SHARE is developing a notification system for research outputs including outputs from institutional repositiories, that provides high value for VIVO and VIVO early middle adopters in the US.
 
-### OCRID
+### OCRiD
 
-ORCID [see @orcid] is a key to VIVO's success.  Thought leaders in the community know that VIVO will fail if each site must disambiguate its authors from external resources such as PubMed, CrossRef and others.  As ORCID progresses, disambigation is reduced and VIVO sites benefit.  VIVO must support ORCID adoption by scholars world-wide every chance it gets.
+ORCiD [see @orcid] is a key to VIVO's success.  Thought leaders in the community know that VIVO will fail if each site must disambiguate its authors from external resources such as PubMed, CrossRef and others.  As ORCiD progresses, disambigation is reduced and VIVO sites benefit.  VIVO must support ORCiD adoption by scholars world-wide every chance it gets.
 
 ### Scientific Electronic Library Online (SciElo)
 
@@ -199,7 +203,7 @@ Some VIVO themes are not appealing to early middle adopters and should not be us
 
 # Themes to emphasize
 
-1. Benefits.  Early middle adopters want to understand "what do I get?".  They understand there will be considerable effort to create VIVO data at their institutions.  They understand there will be considerable technological risk involved with triple stores, SPARQL and ontologies.  New capabilities relevant to their business must be emphaiszed.  These benefits include ability to assess program impact, research impact, and to use these assessments to improve their institutions.
+1. Benefits.  Early middle adopters want to understand "what do I get?".  They understand there will be considerable effort to create VIVO data at their institutions.  They understand there will be considerable technological risk involved with triple stores, SPARQL and ontologies.  New capabilities relevant to their business must be emphaiszed.  These benefits include the ability to assess program impact, research impact, and to use these assessments to improve their institutions.
 1. Adoption by others.  This mitigates technology risk as well as the risk that VIVO will pass away.  More adopters, more members, and more activity, each lower the risk of adoption.  "No one every got fired for buying IBM" -- but plenty of people get burned for adopting smaller technologies.  Adoption leads to more adoption.  Telling VIVO Stories is a powerful tool for demonstrating adoption, leading to more adoption.
 1. Service providers.  The presence of service providers mitigates technology risk and provides assurances that the implementation can be completed and maintained.
 1. The library.  The library is a powerful stabilizing influence for early middle adopters.  While early middle adopters may be put off by the technologies involved with VIVO, they will respond positively to the involvement of libraries which are naturally conservative.  When libraries are involved with VIVO, it sends a signal to the rest of the institution that technology risk has been mitigated.
@@ -208,21 +212,19 @@ Some VIVO themes are not appealing to early middle adopters and should not be us
 
 ##Product strategy -- Focus on Output
 
-The roadmap should place heavy emphasis on output appealing to early middle adopters.  Create benefits for the early middle adopters.  Visualizations, reports, data output and other opportunities to present, analysze and reuse VIVO data are key.
-
-The roadmap is currently under development.
+The roadmap should place heavy emphasis on output appealing to early middle adopters.  Create benefits for the early middle adopters.  Visualizations, reports, data output and other opportunities to present, analyze and reuse VIVO data are key.
 
 ##Community strategy -- Focus on Consortia
 
-Community strategy should focus on groups that can help VIVO drive adoption to early middle adopters.  SURA, the CTSA Consortia, USDA, the NIH NCI Cancer Centers and initiatives in Europe are key.  Each should be worked by the project director, Duraspace, Steering, Leadership and VIVO community to insure increased adoption through these consortia, and participation by consortia leadership in the adoption of VIVO, and recognition and development of software beenfitting the consortial members.
+Community strategy should focus on groups that can help VIVO drive adoption to early middle adopters.  SURA, the CTSA Consortia, USDA, the NIH NCI Cancer Centers, and initiatives in Europe are key.  Each should be worked by the project director, Duraspace, Steering, Leadership, and VIVO community to insure increased adoption through these consortia, and participation by consortia leadership in the adoption of VIVO, and recognition and development of software beenfiting the consortial members.
 
 ##Partner strategy -- Focus on the Ecosystem
 
-Partner strategy should docus on groups that can help VIVO become the trusted partner and obvious choice in the emerging research ecosystem.
+Partner strategy should docus on groups that can help VIVO become the trusted partner and obvious choice in the emerging scholarly ecosystem.
 
 #Summary
 
-For VIVO to get from 25 adoptions to 50 to 100, 200, 400 and 800, VIVO must appeal to the early middle adopters -- those decision makers who are looking to create benefit for their institutions.  VIVO must clarify its benefit to scholarly organizations through product improvement focused on output, community strategy focused on consortial adoption, and partner strategy focused on the next generation research ecosystem. 
+For VIVO to get from 100 adoptions to 200, 400, and 800, VIVO must appeal to the early middle adopters -- those decision makers who are looking to create benefit for their institutions.  VIVO must clarify its benefit to scholarly organizations through product improvement focused on output, community strategy focused on consortial adoption, and partner strategy focused on the next generation scholarly ecosystem. 
 
 # References
 
